@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "pain001"
+version = "0.0.25"
+description = "Pain001 is a Python Library for Automating ISO 20022-Compliant Payment Files Using CSV Data."
+authors = ["Sebastien Rousseau <sebastian.rousseau@gmail.com>"]
+license = "Apache Software License"
+readme = "README.md"
+repository = "https://github.com/sebastienrousseau/pain001"
+homepage = "https://pain001.com"
+
+[tool.poetry.dependencies]
+click = "8.1.7"
+colorama = "0.4.6"
+datetime = "5.5"
+defusedxml = "0.7.1"
+elementpath = "4.4.0"
+jinja2 = "3.1.4"
+markdown-it-py = "3.0.0"
+markupsafe = "2.1.5"
+mdurl = "0.1.2"
+pygments = "2.18.0"
+python = "^3.9"
+rich = "13.7.1"
+setuptools = "69.5.1"
+xmlschema = "3.3.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+pytest-cov = "^5.0.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+Sphinx = "^7.3.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 79
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+combine_as_imports = true
+known_first_party = "pain001"
+known_third_party = "xmlschema"
+
+[tool.pytest]
+addopts = "--cov=pain001 --cov-report=term-missing --cov-report=xml --cov-report=html --cov-fail-under=100"
+testpaths = "tests"

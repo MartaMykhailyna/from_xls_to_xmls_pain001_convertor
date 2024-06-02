@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+actor User
+actor Admin
+
+rectangle System {
+    User --> (Реєстрація користувача)
+    User --> (Авторизація користувача)
+    User --> (Перегляд продуктів)
+    User --> (Додавання продукту до кошика)
+    User --> (Оформлення замовлення)
+    
+    Admin --> (Управління продуктами)
+    Admin --> (Управління користувачами)
+    Admin --> (Перегляд звітів)
+}
+@enduml

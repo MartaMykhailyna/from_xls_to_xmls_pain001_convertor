@@ -1,0 +1,10 @@
+{% block content %}
+    <form id="form-for-getting-file" action="{% url 'download-ready-file' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Import .xls file</label>
+        <input name="import_file" type="file" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+        <button type="submit">Convert and Download CSV</button>
+
+    </form>
+    <a href="{% url 'download-ready-file' %}">Donwload</a>
+{% endblock content %}

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09">
+    
+    <CstmrCdtTrfInitn> <!--Инициация платежной инструкции-->
+        
+        <GrpHdr> <!--Набор платежных характеристик-->
+            
+            <CreDtTm>2023-12-28</CreDtTm><!--CBDOCUMENT.documentdate-->
+            <NbOfTxs>1</NbOfTxs><!--Колличество транзакций-->
+            <CtrlSum>2555</CtrlSum><!--Контрольная сумма всех транзакций-->
+
+            <InitgPty><!--Ініціатор-->
+                <Nm>Unifits</Nm>
+                <Id>
+                    <OrgId>
+                        <Othr>
+                            <Id>12345678</Id>
+                            <SchmeNm>
+                                <Prtry>USRC</Prtry>
+                            </SchmeNm>
+                        </Othr>
+                    </OrgId>
+                </Id>
+            </InitgPty>
+
+        </GrpHdr>   
+
+        <PmtInf> <!--Плвтежная информация-->
+            <PmtInfId>testPmtInfId</PmtInfId><!--Контроль корректности-->
+            <NbOfTxs>2</NbOfTxs><!--Контроль корректности-->
+            <PmtMtd>TRF</PmtMtd><!--Спосіб виконання платіжної інструкції. Контроль корректности--> 
+            
+            <Dbtr> <!-- Плательщик. Контроль корректности-->
+                <Nm>test</Nm>
+                <Id>
+                    <PrvtId>
+                        <Othr>
+                            <Id>123</Id>
+                            <SchmeNm>
+                                <Prtry>OT</Prtry>
+                            </SchmeNm>
+                        </Othr>
+                    </PrvtId>
+                </Id>
+            </Dbtr>
+
+            <DbtrAgt><!-- Агент платника. Контроль корректности-->
+                <FinInstnId>
+                    <ClrSysMmbId>
+                        <ClrSysId>
+                            <Prtry>ASP</Prtry>
+                        </ClrSysId>
+                        <MmbId>123456</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </DbtrAgt>            
+            
+            <ReqdExctnDt> 
+                <Dt>2023-12-28</Dt><!--CBDOCUMENT.valuedate-->
+            </ReqdExctnDt>
+            
+            <!--Рахунок Платника-->
+            <DbtrAcct>
+                <Id>
+                    <IBAN>UA893281680000002600412067900</IBAN><!--CBDOCUMENT.accountid-->
+                </Id>
+            </DbtrAcct>
+            
+            <!--Реквізити трансакції-->
+			 <!--главный документ-->
+            <CdtTrfTxInf>
+                
+                <PmtId>                       
+                    <EndToEndId>27122023-3</EndToEndId> <!--(CBDOCUMENT.documentno)-->   
+                </PmtId>
+                
+                <Amt>                         
+                    <InstdAmt Ccy="UAH">1223</InstdAmt><!--(CBDOCUMENT.amount)2.6.3.1 Проінструктована сума-->
+                </Amt>
+                
+                <!--Фактичний платник (CBDOCUMENT.actual_payer)-->
+                <UltmtDbtr>
+                    <Nm>1 Фактичний платник</Nm>      
+                             
+                    <PstlAdr>                                
+                        <StrtNm>Сумская</StrtNm>
+                        <BldgNb>Дом 15</BldgNb>
+                        <Room>99</Room>
+                        <PstCd>32310</PstCd>
+                        <TwnNm>Харьков</TwnNm>
+                        <DstrctNm>Район</DstrctNm>
+                        <CtrySubDvsn>Харьковская</CtrySubDvsn>
+                        <Ctry>UA</Ctry>
+                    </PstlAdr>
+
+                    <Id>                    
+                        <PrvtId>
+
+                            <DtAndPlcOfBirth>
+                                <BirthDt>2000-02-22</BirthDt>
+                                <CityOfBirth>Населений пункт</CityOfBirth>
+                                <CtryOfBirth>UA</CtryOfBirth>
+                            </DtAndPlcOfBirth>
+
+                            <Othr>
+                                <Id>1212121212</Id>
+                                <SchmeNm>
+                                    <Prtry>RNRCT</Prtry> <!--ФЛ в полі "Тип идентификации - значение РНОКПП-->
+                                </SchmeNm>
+                            </Othr>
+
+                        </PrvtId>
+
+                        <OrgId>
+                            <Othr>
+                                <Id>32654654</Id>
+                                <SchmeNm>
+                                    <Prtry>USRC</Prtry> <!--ЮЛ ЕГРПОУ -->
+                                </SchmeNm>
+                            </Othr>
+                        </OrgId>
+
+                    </Id>
+
+                    <CtryOfRes>UA</CtryOfRes>
+                </UltmtDbtr>      
+
+                <Cdtr><!--2.6.6 Отримувач-->
+
+                    <Nm>Найменування отримувача</Nm> 
+
+                    <PstlAdr>                <!--(CBDOCUMENT.correspondent_ext)2.6.6.2 Місцезнаходження-->
+                        <StrtNm>Улица_получателя</StrtNm>
+                        <BldgNb>6</BldgNb>
+                        <Room>15</Room>
+                        <PstCd>63350</PstCd>
+                        <TwnNm>сг. Харьков</TwnNm>
+                        <DstrctNm>Киевский</DstrctNm>
+                        <CtrySubDvsn>Харьковская</CtrySubDvsn>
+                        <Ctry>UA</Ctry>
+                    </PstlAdr>
+                         
+                    <Id>                     <!--(CBDOCUMENT.correspondent_ext)2.6.6.3-->
+                        <PrvtId>
+                            <DtAndPlcOfBirth>
+                                <BirthDt>2000-02-22</BirthDt>
+                                <CityOfBirth>Населений пункт</CityOfBirth>
+                                <CtryOfBirth>UA</CtryOfBirth>
+                            </DtAndPlcOfBirth>
+                            <Othr>
+                                <Id>ВА323232</Id>
+                                <SchmeNm>
+                                    <Prtry>PSPT</Prtry>
+                                </SchmeNm>
+                            </Othr>
+                        </PrvtId>
+
+                       <!-- <OrgId>
+                            <Othr>
+                                <Id>23659859</Id>
+                                <SchmeNm>
+                                    <Prtry>USRC</Prtry>
+                                </SchmeNm>
+                            </Othr>
+                        </OrgId>-->
+                    </Id>
+
+                    <CtryOfRes>UA</CtryOfRes>  <!--(CBDOCUMENT.corrcauntryid)2.6.6.4 Країна резидентності-->
+                    
+                </Cdtr>
+                
+                <CdtrAcct><!--2.6.14 Рахунок Отримувача-->
+                    <Id>
+                        <IBAN>UA988999980355789000001101079</IBAN><!--(CBDOCUMENT.corraccountno)Рахунок Отримувача-->
+                    </Id>
+                </CdtrAcct>
+                
+                <UltmtCdtr><!--(CBDOCUMENT.actual_correspondent)2.6.15 Фактичний отримувач-->
+                    <Nm>Фактичний отримувач</Nm>
+                    
+                    <PstlAdr>
+                        <StrtNm>Полтавский Шлях</StrtNm>
+                        <BldgNb>55 А</BldgNb>
+                        <Room>8</Room>
+                        <PstCd>59856</PstCd>
+                        <TwnNm>Киев</TwnNm>
+                        <DstrctNm>Район</DstrctNm>
+                        <CtrySubDvsn>Киевская</CtrySubDvsn>
+                        <Ctry>UA</Ctry>
+                    </PstlAdr>
+                    
+                    <Id>                    
+                        <!--<PrvtId>
+                            <DtAndPlcOfBirth>
+                                <BirthDt>2000-02-22</BirthDt>
+                                <CityOfBirth>Населений пункт</CityOfBirth>
+                                <CtryOfBirth>UA</CtryOfBirth>
+                            </DtAndPlcOfBirth>
+                            
+                            <Othr>
+                             <Id>йцуйцу</Id>
+                                <SchmeNm>
+                                 <Prtry>RNRCT</Prtry>
+                                </SchmeNm>
+                            </Othr>
+                        </PrvtId>-->
+
+                        <OrgId>
+                            <Othr>
+                                <Id>22556658</Id>
+                                <SchmeNm>
+                                    <Prtry>USRC</Prtry>
+                                </SchmeNm>
+                            </Othr>
+                        </OrgId>
+                        
+                    </Id>
+                    
+                    <CtryOfRes>UA</CtryOfRes>
+                    
+                </UltmtCdtr> 
+
+                <RmtInf>  
+                    <!-- 
+                    <Ustrd>axcvxvcvcxcvxvxvxcsdff</Ustrd>
+		             -->
+                    <Strd>               
+                        <TaxRmt>
+
+                            <Rcrd>                  
+                                <Tp>Код класифікації доходів бюджету</Tp>         
+                                <Ctgy> Інформація про податкове повідомлення (рішення)</Ctgy>       
+                                <CtgyDtls>UA909999992990002600123456789</CtgyDtls>
+                                <CertId>101</CertId>    
+                                <TaxAmt>
+                                    <TtlAmt Ccy="UAH">1000</TtlAmt>
+                                </TaxAmt>
+                                <AddtlInf>1 Додаткова інформація запису</AddtlInf>
+                            </Rcrd>
+
+                            <Rcrd>                  
+                                <Tp>Код класифікації дохоgdzfzdfдів бюджету</Tp>         
+                                <Ctgy> Інформація про податкове повідомлення (рішення)</Ctgy>       
+                                <CtgyDtls>UA909999992990002600123456789</CtgyDtls>
+                                <CertId>101</CertId>    
+                                <TaxAmt>
+                                    <TtlAmt Ccy="UAH">223</TtlAmt>
+                                </TaxAmt>
+                                <AddtlInf>1 Додаткова інформація запису</AddtlInf>
+                            </Rcrd>
+
+                        </TaxRmt>
+                        
+                    </Strd>  
+                          
+                </RmtInf>
+
+            </CdtTrfTxInf>
+            
+        </PmtInf>
+
+    </CstmrCdtTrfInitn>
+
+</Document>
+
+
