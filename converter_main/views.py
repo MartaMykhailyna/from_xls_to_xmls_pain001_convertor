@@ -7,7 +7,7 @@ from django.shortcuts import render
 import requests
 import xlrd
 from django.http import HttpResponseBadRequest
-from pain001 import __main__
+from pain001 import main
 
 # Create your views here.
 def home_page(request):
