@@ -1,0 +1,66 @@
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09">
+   <CstmrCdtTrfInitn>
+      <GrpHdr>
+         <CreDtTm>
+            2024-02-20 00:00:00
+         </CreDtTm>
+         <NbOfTxs>
+            1
+         </NbOfTxs>
+         <CtrlSum>
+            200
+         </CtrlSum>
+      </GrpHdr>
+      <PmtInf>
+         <PmtInfId>
+            Unifits
+         </PmtInfId>
+         <NbOfTxs>
+            None
+         </NbOfTxs>
+         <ReqdExctnDt>
+            <Dt>
+               USRC
+            </Dt>
+         </ReqdExctnDt>
+         <DbtrAcct>
+            <Id>
+               <IBAN >
+                  testPmtInfId
+               </IBAN >
+            </Id>
+         </DbtrAcct>
+      </PmtInf>
+      <GrpHdr>
+         <CreDtTm>
+            2024-02-20 00:00:00
+         </CreDtTm>
+         <NbOfTxs>
+            1
+         </NbOfTxs>
+         <CtrlSum>
+            210
+         </CtrlSum>
+      </GrpHdr>
+      <PmtInf>
+         <PmtInfId>
+            Unifits
+         </PmtInfId>
+         <NbOfTxs>
+            None
+         </NbOfTxs>
+         <ReqdExctnDt>
+            <Dt>
+               USRC
+            </Dt>
+         </ReqdExctnDt>
+         <DbtrAcct>
+            <Id>
+               <IBAN >
+                  testPmtInfId
+               </IBAN >
+            </Id>
+         </DbtrAcct>
+      </PmtInf>
+   </CstmrCdtTrfInitn>
+</Document>
