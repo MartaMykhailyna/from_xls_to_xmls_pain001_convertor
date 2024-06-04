@@ -38,7 +38,7 @@ def import_file(request):
 
         with tag('Document', xml_schema):
             with tag('CstmrCdtTrfInitn'):
-                    for row in workSheet.iter_rows(min_row=2, min_col=1): 
+                    for row in workSheet.iter_rows(min_row=1, min_col=1): 
                         row = [cell.value for cell in row]
                         with tag("GrpHdr"): 
                             with tag("CreDtTm"): 
@@ -47,18 +47,91 @@ def import_file(request):
                                 text(row[1]) 
                             with tag("CtrlSum"): 
                                 text(row[2]) 
+                        with tag('InitgPty'):
+                            doc.stag('Nm')
+                            with tag('Id'):
+                                with tag('OrgId'):
+                                    with tag('Othr'):
+                                        doc.stag('Id')
+                                        with tag('SchmeNm'):
+                                            doc.stag('Prtry')
                         with tag('PmtInf'):
-                            with tag('PmtInfId'):
-                                text(row[3])
-                            with tag('NbOfTxs'):
-                                text(str(row[4]))
-                            with tag('ReqdExctnDt'):
-                                with tag('Dt'):
-                                    text(row[5])
-                            with tag('DbtrAcct'):
+                            doc.stag('PmtInfId')
+                            doc.stag('NbOfTxs')
+                            doc.stag('PmtMtd')
+                            with tag('Dbtr'):
+                                with tag('Nm'):
+                                    text(row[9])
                                 with tag('Id'):
-                                    with tag('IBAN '):
-                                        text(row[6])
+                                    with tag('PrvtId'):
+                                        with tag('Othr'):
+                                            with tag('Id'):
+                                                text(row[10])
+                                            with tag('SchmeNm'):
+                                                doc.stag('Prtry') 
+                            with tag('DbtrAgt'):
+                                with tag('FinInstnId'):            
+                                    with tag('ClrSysMmbId'):            
+                                        with tag('ClrSysId'):  
+                                            with tag('Prtry'):
+                                                text(str(row[11]))
+                                        with tag('MmbId'):
+                                            text(row[12])         
+                                with tag('ReqdExctnDt'):
+                                    with tag('Dt'):
+                                        text(row[13])
+                                with tag('DbtrAcct'):
+                                    with tag('Id'):
+                                        with tag('IBAN'):
+                                            text(str(row[14]))
+                                with tag('CdtTrfTxInf'):
+                                    with tag('PmtId'):
+                                        doc.stag('EndToEndId')
+                                    with tag('Amt'):
+                                        with tag('InstdAmt', Ccy="UAH"):
+                                            text(row[15])
+                                    with tag('Cdtr'):
+                                        with tag('Nm'):
+                                            text(str(row[16]))
+                                        with tag('PstlAdr'):
+                                            doc.stag('StrtNm')
+                                            doc.stag('BldgNb')
+                                            doc.stag('Room')
+                                            doc.stag('PstCd')
+                                            doc.stag('TwnNm')
+                                            doc.stag('DstrctNm')
+                                            doc.stag('CtrySubDvsn')
+                                            with tag('Ctry'):
+                                                text(row[17])
+                                        with tag('Id'):
+                                            with tag('OrgId'):
+                                                with tag('Othr'):
+                                                    with tag('Id'):
+                                                        text(row[18])
+                                                    with tag('SchmeNm'):
+                                                        doc.stag('Prtry')
+                                        with tag('CtryOfRes'):
+                                            text(row[19])
+                                    with tag('DbtrAcct'):
+                                        with tag('Id'):
+                                            with tag('IBAN'):
+                                                text(str(row[20]))
+                                    with tag('RmtInf'):
+                                        with tag('Strd'):
+                                            with tag('TaxRmt'):
+                                                with tag('Rcrd'):
+                                                    doc.stag('Tp')
+                                                    with tag('Ctgy'):
+                                                        text(str(row[21]))
+                                                    doc.stag('CtgyDtls')
+                                                    with tag('CertId'):
+                                                        text(str(row[22]))
+                                                    with tag('TaxAmt'):
+                                                        doc.stag('TtlAmt', Ccy="UAH")
+                                                    with tag('AddtlInf'):
+                                                        text(str(row[23]))
+
+
 
 
         # Generate XML string

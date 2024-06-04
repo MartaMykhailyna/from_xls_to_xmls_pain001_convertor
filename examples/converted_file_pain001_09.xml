@@ -1,0 +1,147 @@
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09">
+   <CstmrCdtTrfInitn>
+      <GrpHdr>
+         <CreDtTm>
+            2024-05-31 00:00:00
+         </CreDtTm>
+         <NbOfTxs>
+            1
+         </NbOfTxs>
+         <CtrlSum>
+            1
+         </CtrlSum>
+      </GrpHdr>
+      <InitgPty>
+         <Nm />
+         <Id>
+            <OrgId>
+               <Othr>
+                  <Id />
+                  <SchmeNm>
+                     <Prtry />
+                  </SchmeNm>
+               </Othr>
+            </OrgId>
+         </Id>
+      </InitgPty>
+      <PmtInf>
+         <PmtInfId />
+         <NbOfTxs />
+         <PmtMtd />
+         <Dbtr>
+            <Nm>
+               ТОВ Прикарпатенерготрейд
+            </Nm>
+            <Id>
+               <PrvtId>
+                  <Othr>
+                     <Id>
+                        42129720
+                     </Id>
+                     <SchmeNm>
+                        <Prtry />
+                     </SchmeNm>
+                  </Othr>
+               </PrvtId>
+            </Id>
+         </Dbtr>
+         <DbtrAgt>
+            <FinInstnId>
+               <ClrSysMmbId>
+                  <ClrSysId>
+                     <Prtry>
+                        None
+                     </Prtry>
+                  </ClrSysId>
+                  <MmbId>
+                     МФО
+                  </MmbId>
+               </ClrSysMmbId>
+            </FinInstnId>
+            <ReqdExctnDt>
+               <Dt>
+                  328168
+               </Dt>
+            </ReqdExctnDt>
+            <DbtrAcct>
+               <Id>
+                  <IBAN>
+                     2024-05-31 00:00:00
+                  </IBAN>
+               </Id>
+            </DbtrAcct>
+            <CdtTrfTxInf>
+               <PmtId>
+                  <EndToEndId />
+               </PmtId>
+               <Amt>
+                  <InstdAmt Ccy="UAH">
+                     UA213281680000026009000005343
+                  </InstdAmt>
+               </Amt>
+               <Cdtr>
+                  <Nm>
+                     None
+                  </Nm>
+                  <PstlAdr>
+                     <StrtNm />
+                     <BldgNb />
+                     <Room />
+                     <PstCd />
+                     <TwnNm />
+                     <DstrctNm />
+                     <CtrySubDvsn />
+                     <Ctry>
+                        2
+                     </Ctry>
+                  </PstlAdr>
+                  <Id>
+                     <OrgId>
+                        <Othr>
+                           <Id>
+                              UAH
+                           </Id>
+                           <SchmeNm>
+                              <Prtry />
+                           </SchmeNm>
+                        </Othr>
+                     </OrgId>
+                  </Id>
+                  <CtryOfRes>
+                     ГУК в Iв.-Фр.об./ТГ Вигода/11010400
+                  </CtryOfRes>
+               </Cdtr>
+               <DbtrAcct>
+                  <Id>
+                     <IBAN>
+                        None
+                     </IBAN>
+                  </Id>
+               </DbtrAcct>
+               <RmtInf>
+                  <Strd>
+                     <TaxRmt>
+                        <Rcrd>
+                           <Tp />
+                           <Ctgy>
+                              None
+                           </Ctgy>
+                           <CtgyDtls />
+                           <CertId>
+                              None
+                           </CertId>
+                           <TaxAmt>
+                              <TtlAmt Ccy="UAH" />
+                           </TaxAmt>
+                           <AddtlInf>
+                              None
+                           </AddtlInf>
+                        </Rcrd>
+                     </TaxRmt>
+                  </Strd>
+               </RmtInf>
+            </CdtTrfTxInf>
+         </DbtrAgt>
+      </PmtInf>
+   </CstmrCdtTrfInitn>
+</Document>
