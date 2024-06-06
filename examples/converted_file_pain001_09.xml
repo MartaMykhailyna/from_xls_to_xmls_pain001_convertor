@@ -1,147 +1,221 @@
-<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09">
-   <CstmrCdtTrfInitn>
-      <GrpHdr>
-         <CreDtTm>
-            2024-05-31 00:00:00
-         </CreDtTm>
-         <NbOfTxs>
-            1
-         </NbOfTxs>
-         <CtrlSum>
-            1
-         </CtrlSum>
-      </GrpHdr>
+<?xml version='1.0' encoding='UTF-8'?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09" xmlns_xsi="http://www.w3.org/2001/XMLSchema-instance" xsi_schemaLocation="urn:iso:std:iso:20022:tech:xsd:pain.001.001.09">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <CreDtTm>2024-05-31</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>1</CtrlSum>
       <InitgPty>
-         <Nm />
-         <Id>
-            <OrgId>
-               <Othr>
-                  <Id />
-                  <SchmeNm>
-                     <Prtry />
-                  </SchmeNm>
-               </Othr>
-            </OrgId>
-         </Id>
+        <Nm>nan</Nm>
+        <Id>
+          <OrgId>
+            <Othr>
+              <Id>nan</Id>
+              <SchmeNm>
+                <Prtry/>
+              </SchmeNm>
+            </Othr>
+          </OrgId>
+        </Id>
       </InitgPty>
-      <PmtInf>
-         <PmtInfId />
-         <NbOfTxs />
-         <PmtMtd />
-         <Dbtr>
-            <Nm>
-               ТОВ Прикарпатенерготрейд
-            </Nm>
-            <Id>
-               <PrvtId>
-                  <Othr>
-                     <Id>
-                        42129720
-                     </Id>
-                     <SchmeNm>
-                        <Prtry />
-                     </SchmeNm>
-                  </Othr>
-               </PrvtId>
-            </Id>
-         </Dbtr>
-         <DbtrAgt>
-            <FinInstnId>
-               <ClrSysMmbId>
-                  <ClrSysId>
-                     <Prtry>
-                        None
-                     </Prtry>
-                  </ClrSysId>
-                  <MmbId>
-                     МФО
-                  </MmbId>
-               </ClrSysMmbId>
-            </FinInstnId>
-            <ReqdExctnDt>
-               <Dt>
-                  328168
-               </Dt>
-            </ReqdExctnDt>
-            <DbtrAcct>
-               <Id>
-                  <IBAN>
-                     2024-05-31 00:00:00
-                  </IBAN>
-               </Id>
-            </DbtrAcct>
-            <CdtTrfTxInf>
-               <PmtId>
-                  <EndToEndId />
-               </PmtId>
-               <Amt>
-                  <InstdAmt Ccy="UAH">
-                     UA213281680000026009000005343
-                  </InstdAmt>
-               </Amt>
-               <Cdtr>
-                  <Nm>
-                     None
-                  </Nm>
-                  <PstlAdr>
-                     <StrtNm />
-                     <BldgNb />
-                     <Room />
-                     <PstCd />
-                     <TwnNm />
-                     <DstrctNm />
-                     <CtrySubDvsn />
-                     <Ctry>
-                        2
-                     </Ctry>
-                  </PstlAdr>
-                  <Id>
-                     <OrgId>
-                        <Othr>
-                           <Id>
-                              UAH
-                           </Id>
-                           <SchmeNm>
-                              <Prtry />
-                           </SchmeNm>
-                        </Othr>
-                     </OrgId>
-                  </Id>
-                  <CtryOfRes>
-                     ГУК в Iв.-Фр.об./ТГ Вигода/11010400
-                  </CtryOfRes>
-               </Cdtr>
-               <DbtrAcct>
-                  <Id>
-                     <IBAN>
-                        None
-                     </IBAN>
-                  </Id>
-               </DbtrAcct>
-               <RmtInf>
-                  <Strd>
-                     <TaxRmt>
-                        <Rcrd>
-                           <Tp />
-                           <Ctgy>
-                              None
-                           </Ctgy>
-                           <CtgyDtls />
-                           <CertId>
-                              None
-                           </CertId>
-                           <TaxAmt>
-                              <TtlAmt Ccy="UAH" />
-                           </TaxAmt>
-                           <AddtlInf>
-                              None
-                           </AddtlInf>
-                        </Rcrd>
-                     </TaxRmt>
-                  </Strd>
-               </RmtInf>
-            </CdtTrfTxInf>
-         </DbtrAgt>
-      </PmtInf>
-   </CstmrCdtTrfInitn>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>nan</PmtInfId>
+      <NbOfTxs>nan</NbOfTxs>
+      <PmtMtd>nan</PmtMtd>
+      <Dbtr>
+        <Nm>ТОВ Прикарпатенерготрейд</Nm>
+        <Id>
+          <PrvtId>
+            <Othr>
+              <Id>42129720</Id>
+              <SchmeNm>
+                <Prtry/>
+              </SchmeNm>
+            </Othr>
+          </PrvtId>
+        </Id>
+      </Dbtr>
+      <DbtrAgt>
+        <FinInstnId>
+          <ClrSysMmbId>
+            <ClrSysId>
+              <Prtry>МФО</Prtry>
+            </ClrSysId>
+            <MmbId>328168</MmbId>
+          </ClrSysMmbId>
+        </FinInstnId>
+      </DbtrAgt>
+      <ReqdExctnDt>
+        <Dt>2024-05-31</Dt>
+      </ReqdExctnDt>
+      <DbtrAcct>
+        <Id>
+          <IBAN>UA213281680000026009000005343</IBAN>
+        </Id>
+      </DbtrAcct>
+      <CdtTrfTxInf>
+        <PmtId>
+          <EndToEndId/>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="UAH">2</InstdAmt>
+        </Amt>
+        <Cdtr>
+          <Nm>ГУК в Iв.-Фр.об./ТГ Вигода/11010400</Nm>
+          <PstlAdr>
+            <StrtNm>nan</StrtNm>
+            <BldgNb>nan</BldgNb>
+            <Room>nan</Room>
+            <PstCd>nan</PstCd>
+            <TwnNm>nan</TwnNm>
+            <DstrctNm>nan</DstrctNm>
+            <CtrySubDvsn>nan</CtrySubDvsn>
+            <Ctry>UA148999980333159342000009602</Ctry>
+          </PstlAdr>
+          <Id>
+            <OrgId>
+              <Othr>
+                <Id>37951998</Id>
+                <SchmeNm>
+                  <Prtry>nan</Prtry>
+                </SchmeNm>
+              </Othr>
+            </OrgId>
+          </Id>
+          <CtryOfRes>UA</CtryOfRes>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>UA148999980333159342000009602</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Strd>
+            <TaxRmt>
+              <Rcrd>
+                <Tp>nan</Tp>
+                <Ctgy>nan</Ctgy>
+                <CtgyDtls>nan</CtgyDtls>
+                <CertId>101</CertId>
+                <TaxAmt>
+                  <TtlAmt Ccy="UAH">UAH</TtlAmt>
+                </TaxAmt>
+                <AddtlInf>Податок з доходів фізичних осіб (зелений тариф) за квітень 2024 р. Термін сплати 31.05.2024</AddtlInf>
+              </Rcrd>
+            </TaxRmt>
+          </Strd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <CreDtTm>2024-05-31</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <CtrlSum>1</CtrlSum>
+      <InitgPty>
+        <Nm>nan</Nm>
+        <Id>
+          <OrgId>
+            <Othr>
+              <Id>nan</Id>
+              <SchmeNm>
+                <Prtry/>
+              </SchmeNm>
+            </Othr>
+          </OrgId>
+        </Id>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>nan</PmtInfId>
+      <NbOfTxs>nan</NbOfTxs>
+      <PmtMtd>nan</PmtMtd>
+      <Dbtr>
+        <Nm>ТОВ Прикарпатенерготрейд</Nm>
+        <Id>
+          <PrvtId>
+            <Othr>
+              <Id>42129720</Id>
+              <SchmeNm>
+                <Prtry/>
+              </SchmeNm>
+            </Othr>
+          </PrvtId>
+        </Id>
+      </Dbtr>
+      <DbtrAgt>
+        <FinInstnId>
+          <ClrSysMmbId>
+            <ClrSysId>
+              <Prtry>МФО</Prtry>
+            </ClrSysId>
+            <MmbId>328168</MmbId>
+          </ClrSysMmbId>
+        </FinInstnId>
+      </DbtrAgt>
+      <ReqdExctnDt>
+        <Dt>2024-05-31</Dt>
+      </ReqdExctnDt>
+      <DbtrAcct>
+        <Id>
+          <IBAN>UA213281680000026009000005343</IBAN>
+        </Id>
+      </DbtrAcct>
+      <CdtTrfTxInf>
+        <PmtId>
+          <EndToEndId/>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="UAH">2</InstdAmt>
+        </Amt>
+        <Cdtr>
+          <Nm>ГУК в Iв.-Фр.об./ТГ Вигода/11010400</Nm>
+          <PstlAdr>
+            <StrtNm>nan</StrtNm>
+            <BldgNb>nan</BldgNb>
+            <Room>nan</Room>
+            <PstCd>nan</PstCd>
+            <TwnNm>nan</TwnNm>
+            <DstrctNm>nan</DstrctNm>
+            <CtrySubDvsn>nan</CtrySubDvsn>
+            <Ctry>UA148999980333159342000009602</Ctry>
+          </PstlAdr>
+          <Id>
+            <OrgId>
+              <Othr>
+                <Id>37951998</Id>
+                <SchmeNm>
+                  <Prtry>nan</Prtry>
+                </SchmeNm>
+              </Othr>
+            </OrgId>
+          </Id>
+          <CtryOfRes>UA</CtryOfRes>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>UA148999980333159342000009602</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Strd>
+            <TaxRmt>
+              <Rcrd>
+                <Tp>nan</Tp>
+                <Ctgy>nan</Ctgy>
+                <CtgyDtls>nan</CtgyDtls>
+                <CertId>101</CertId>
+                <TaxAmt>
+                  <TtlAmt Ccy="UAH">UAH</TtlAmt>
+                </TaxAmt>
+                <AddtlInf>Податок з доходів фізичних осіб (зелений тариф) за квітень 2024 р. Термін сплати 31.05.2024</AddtlInf>
+              </Rcrd>
+            </TaxRmt>
+          </Strd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
 </Document>
